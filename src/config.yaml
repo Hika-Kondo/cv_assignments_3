@@ -1,0 +1,29 @@
+ex_name: test
+
+transforms:
+        kwargs:
+                affine: false
+                normalize: false
+                rotate: false
+
+solver:
+        kwargs:
+                epochs: 100
+                device: cuda
+                save_dir: model
+
+dataloader:
+        kwargs:
+            batch_size: 64
+            shuffle: true
+            num_workers: 6
+
+optim:
+        name: Adam
+        kwargs:
+                lr : 1e-3
+                betas : [0.9,0.999]
+                eps : 1e-8
+                weight_decay : 0
+
+num_data: 60000
